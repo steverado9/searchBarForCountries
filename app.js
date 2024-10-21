@@ -50,7 +50,7 @@ searchBar.addEventListener('keyup', function(e){ // i added a key up event to it
         }  
     })
         
-    numberOfCountires.textContent = `${listedCountries.length} Countries`; //the textcontent of the h3 element should be the length of the array
+    numberOfCountires.textContent = `${listedCountries.length} Countries with the keyword ${value}`; //the textcontent of the h3 element should be the length of the array
     numberOfCountires.style.display = 'block'; //i styled the h3 element
     numberOfCountires.style.textAlign = 'center';
     numberOfCountires.style.padding = '10px';
