@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+header{
+    text-align: center;
+    background-color: #37AFE1;
+    padding: 20px;
+}
+
+header form input{
+    width: 400px;
+    height: 30px;
+}
+
+section p{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #E9EED9;
+}
+
+section p:hover{
+    text-align: center;
+    background-color: #E9EED9;
+    color: black;
+}
+
+section h3{
+    display: none;
+}
