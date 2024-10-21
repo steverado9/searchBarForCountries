@@ -44,7 +44,12 @@ searchBar.addEventListener('keyup', function(e){ // i added a key up event to it
         let eachCountry = country.textContent; // i put the text content of ptags in a variable
         if (eachCountry.toLowerCase().indexOf(value) != -1) { //converted the text content to lowercase and checked if what is typed is the index of any country
             listedCountries.push(eachCountry) //i pushed each country with the index of what is typed to an array
+            section.style.display = 'flex'
+            section.style.flexDirection = 'column'
             country.style.display = 'block';// if what is typed has an index, it should be displayed
+            country.style.textAlign = 'center';
+            country.style.padding = '10px';
+            country.style.borderBottom= '1px solid #E9EED9';
         } else {
             country.style.display = 'none'; //else it should be hidden
         }  
