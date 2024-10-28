@@ -1,4 +1,4 @@
-let myCountires = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina',
+const myCountires = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina',
     'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'The Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus',
     'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei',
     'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', ' Central African Republic',
@@ -28,8 +28,8 @@ totalCountry.textContent = `The Total Number Of Countires is: ${myCountires.leng
 
 const section = document.getElementById('section'); //selected the section element
 //display country
-function displayContries() { // i created a function to display the countries
-    myCountires.forEach(function (country) { // i looped through the array of countries 
+function displayCountries() { // i created a function to display the countries
+    myCountires.forEach((country) => { // i looped through the array of countries 
         const para = document.createElement('div'); //i created a divtag element
         para.textContent = country; // i gave it a text content of each country that was looped 
         section.appendChild(para); //i appended the p tag to the section element
@@ -39,7 +39,7 @@ displayContries(); // i called the function to display element
 
 //The form
 const form = document.forms['search']; //i selected the form element
-const numberOfCountires = document.getElementById('display'); // i selected the h3 element that will display the number of countries with a particular letter
+const numberOfCountries = document.getElementById('display'); // i selected the h3 element that will display the number of countries with a particular letter
 const listedCountries = []; // i created an empty array to put the countries to be displayed inside
 
 form.addEventListener('click', function(e) { // i added a key up event to it: When never you release the key of your keybord, it is triggered
