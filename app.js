@@ -24,18 +24,18 @@ const myCountries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', '
 
 //Displays the total number of countiries in the header "h2"
 const totalCountry = document.querySelector(" header h5");//get the h2 element in the header
-totalCountry.textContent = `The Total Number Of Countires is: ${myCountires.length}`; //text content of the h2 element
+totalCountry.textContent = `The Total Number Of Countires is: ${myCountries.length}`; //text content of the h2 element
 
 const section = document.getElementById('section'); //selected the section element
 //display country
 function displayCountries() { // i created a function to display the countries
-    myCountires.forEach((country) => { // i looped through the array of countries 
+    myCountries.forEach((country) => { // i looped through the array of countries 
         const para = document.createElement('div'); //i created a divtag element
         para.textContent = country; // i gave it a text content of each country that was looped 
         section.appendChild(para); //i appended the p tag to the section element
     })
 }
-displayContries(); // i called the function to display element
+displayCountries(); // i called the function to display element
 
 //The form
 const form = document.forms['search']; //i selected the form element
@@ -60,7 +60,7 @@ form.addEventListener('click', function(e) { // i added a key up event to it: Wh
             } else {
                 country.style.display = 'none'; //else it should be hidden
             }
-            numberOfCountires.textContent = `${listedCountries.length} Countries has the keyword ${value}`; //the textcontent of the h3 element should be the length of the arra
+            numberOfCountries.textContent = `${listedCountries.length} Countries has the keyword "${value}"`; //the textcontent of the h3 element should be the length of the arra
 
         } else if (e.target.className == "starting-word") {
 
@@ -73,7 +73,7 @@ form.addEventListener('click', function(e) { // i added a key up event to it: Wh
             } else {
                 country.style.display = 'none'; //else it should be hidden
             }
-            numberOfCountires.textContent = `${listedCountries.length} Countries start with the keyword ${value}`; //the textcontent of the h3 element 
+            numberOfCountries.textContent = `${listedCountries.length} Countries start with the keyword "${value}"`; //the textcontent of the h3 element 
         }
     })
 })
